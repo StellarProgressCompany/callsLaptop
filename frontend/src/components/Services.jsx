@@ -184,8 +184,14 @@ const servicesData = [
 
 function Services() {
     return (
-        <section id="services" className="py-16 bg-gray-800">
-            {/* Bloque SEO (sin Helmet): metaetiquetas se pueden agregar en el index.html o layout principal */}
+        <section
+            id="services"
+            className="relative overflow-visible pt-24 pb-16 bg-gray-800"
+        >
+
+
+
+            {/* Bloque principal de Services */}
             <div className="container mx-auto px-6">
                 <motion.div
                     className="text-center mb-12"
@@ -236,7 +242,7 @@ function Services() {
                 </div>
 
                 <motion.div
-                    className="text-center mt-16"
+                    className="text-center mt-16 mb-20"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -255,6 +261,38 @@ function Services() {
                     </a>
                 </motion.div>
             </div>
+            <div className="absolute bottom-0 left-0 w-full pointer-events-none leading-[0] transform rotate-180">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1000 100"
+                    preserveAspectRatio="none"
+                    className="w-full h-[100px] block"
+                >
+                    {/* Base opaca (bg-gray-900) */}
+                    <path
+                        fill="#111827"
+                        d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"
+                    />
+                    {/* Capas semitransparentes */}
+                    <path
+                        fill="#111827"
+                        opacity=".5"
+                        d="M617 1v86C372 119 384 1 196 1h421Z"
+                    />
+                    <path
+                        fill="#111827"
+                        opacity=".5"
+                        d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z"
+                    />
+                    <path
+                        fill="#111827"
+                        opacity=".5"
+                        d="M0 1v99c134.3 0 153.7-99 296-99H0Z"
+                    />
+                </svg>
+            </div>
+
+
         </section>
     );
 }

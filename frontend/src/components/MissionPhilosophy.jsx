@@ -90,7 +90,8 @@ const sections = [
 
 function MissionPhilosophy() {
     return (
-        <section id="mission-philosophy" className="py-32 mt-12 bg-gray-700">
+        <section id="mission-philosophy" className="py-32  bg-gray-700">
+
             {/* Sección con tres bloques destacados */}
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
