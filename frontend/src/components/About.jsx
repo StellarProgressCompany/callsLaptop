@@ -85,7 +85,7 @@ function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <img src={upcImage} alt="UPC Logo" className="w-56 md:w-72 lg:w-[200px]" />
+                    <img src={upcImage} alt="UPC Logo" className="w-56 md:w-72 mb-8 lg:w-[200px]" />
                 </motion.div>
             </div>
 
