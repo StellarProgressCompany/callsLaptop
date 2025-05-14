@@ -4,15 +4,23 @@ import { motion } from 'framer-motion';
 
 function Hero() {
     return (
-        <section id="hero" className="min-h-screen flex items-center justify-center relative">
-            <motion.h1
-                className="text-5xl md:text-7xl font-thin uppercase text-center"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.9 }} // Espera 1.9 segundos para iniciar
-            >
-                Su Éxito Es <span className="text-yellow-500">Nuestro Compromiso.</span>
-            </motion.h1>
+        <section
+            id="hero"
+            className="min-h-screen flex items-center justify-center relative"
+            role="banner"
+            aria-label="Hero: Su Éxito Es Nuestro Compromiso | Stellar Progress"
+        >
+            <header className="text-center">
+                <motion.h1
+                    className="text-5xl md:text-7xl font-thin uppercase"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1.9 }} // Espera 1.9 segundos para iniciar
+                >
+                    Su Éxito Es <span className="text-yellow-500">Nuestro Compromiso.</span>
+                </motion.h1>
+            </header>
+
             {/* Shape divider: Layered curves ------------------------------------ */}
             <div className="absolute bottom-0 left-0 w-full leading-[0] pointer-events-none">
                 <svg
@@ -20,6 +28,8 @@ function Hero() {
                     viewBox="0 0 1000 100"
                     preserveAspectRatio="none"
                     className="w-full h-[100px]"
+                    role="img"
+                    aria-hidden="true"
                 >
                     <g fill="#111827">
                         <rect fill="#1F2937" width="100%" height="100%" />
